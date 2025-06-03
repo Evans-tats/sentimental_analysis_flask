@@ -20,16 +20,19 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Install Azure ML CLI extension
-      run: az extension add -n ml
+    #- name: Install Azure ML CLI extension
+    #  run: az extension add -n ml
 
     
     - name: set auto-install of extensions
       run: az config set extension.use_dynamic_install=yes_without_prompt
-    - name: attach workspace
-      run: az ml folder attach -w Preactical_ml_book -g evanskipsang21-rg
-    - name: retrieve the model
-      run: az ml model download -t "." --model-id "roberta--seqence:1"
+    #- name: attach workspace
+    #  run: az ml folder attach -w Preactical_ml_book -g evanskipsang21-rg
+    #- name: retrieve the model
+      #run: az ml model download -t "." --model-id "roberta--seqence:1"
+    - name: Download the model
+      run: az ml model download -t "." --model-id "roberta-sequence:1" -w "Preactical_ml_book" -g "evanskipsang21-rg"
+
 
     - name: build flask-app container
       uses: docker/build-push-action@v2
