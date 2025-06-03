@@ -23,7 +23,7 @@ jobs:
     - name: set auto-install of extensions
       run: az config set extension.use_dynamic_install=yes_without_prompt
     - name: attach workspace
-      run: az ml folder attach -w 'Preactical_ml_book  (preactical_ml_book)' -g "evanskipsang21-rg"
+      run: az ml folder attach -w Preactical_ml_book -g evanskipsang21-rg
     - name: retrieve the model
       run: az ml model download -t "." --model-id "roberta--seqence:1"
 
