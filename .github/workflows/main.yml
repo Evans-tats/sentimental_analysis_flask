@@ -31,7 +31,7 @@ jobs:
     #- name: retrieve the model
       #run: az ml model download -t "." --model-id "roberta--seqence:1"
     - name: Download the model
-      run: az ml model download --name roberta-sequence --version 1 --download-path "." -w "Preactical_ml_book" -g "evanskipsang21-rg"
+      run: az ml model download --name roberta-seqence --version 1 --download-path "." -w "Preactical_ml_book" -g "evanskipsang21-rg"
 
 
 
