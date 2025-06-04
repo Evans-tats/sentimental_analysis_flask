@@ -48,4 +48,4 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ghcr.io/Evans-tats/flask-roberta:latest
+        tags: ghcr.io/Evans-tats/sentimental_analysis_flask:latest
